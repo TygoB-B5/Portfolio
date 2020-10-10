@@ -1,0 +1,133 @@
+
+html
+{
+  background-image: url("img/bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+.intro, #title
+{
+    text-align: center;
+    color: rgb(225, 225, 255);
+    height: max-content;
+    font-size: 20px;
+}
+
+.container
+{
+  border: 0.1vw solid rgba(0, 0, 0, 1); 
+  display: inline-block;
+  position:relative;
+  width: 32.9vw;
+  height: 19vw;
+  margin: -3px;
+}
+
+@media (max-width: 1400px)
+{
+  .container {
+    width: 49.6vw;
+    height: 28vw;
+  }
+}
+
+@media (max-width: 1250px)
+{
+    .intro, #title
+  {
+      margin: 50px;
+  }
+
+  .container {
+    width: 100vw;
+    height: 56vw;
+    margin: 0;
+    margin-bottom: -0.6%;
+  }
+}
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    transition: background 0.35s ease-out;
+  }
+  
+  .container:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  img, video {
+    position: absolute;
+    width:  100%;
+    height: 100%;
+    left: 0;
+  }
+  
+
+  .title {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 35%;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    z-index: 1;
+    transition: top .5s ease;
+  }
+
+  
+  .container:hover .title {
+    top: 10%;
+  }
+  
+  .button {
+    position: absolute;
+    width: 100%;
+    left:0;
+    top: 45%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+  
+  .button a {
+    width: 200px;
+    padding: 12px 48px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+  }
+  
+  .container:hover .button {
+    opacity: 1;
+  }
+
+  @media (max-width: 1250px) 
+  {
+    .title {
+      font-size: 50px;
+      transition: top .5s ease;
+    }
+    
+    .button a {
+      font-size: 30px;
+    }
+  }

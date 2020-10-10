@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4 - In A Row</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="4inarow.css"/>
+    </head>
+
+    <body>
+        <div class="title">
+            <h1>4 In A Row</h1>
+            <h2>Mijn Ambitieopdracht</h2>
+        </div>
+
+        <div class="Samenvatting">
+            <h3>Wat heb ik gemaakt</h3>
+            <p>Ik heb 4 op een rij gemaakt met gebruik van de programmeertaal C# en Unity.<br>
+            Dit heb ik gedaan voor mijn ambitiegesprek om mijn motivatie voor de studierichting Game-Developpemnt te laten zien.<br></p>
+            <h3>Mijn Uitdagingen:</h3>
+            <ul>
+                <li>Meer gestructureerd en duidelijker coden</li>
+                    <li>een logische game maken die veel logica vereist</li>
+            </ul>
+            <h3>Hoe ga ik dit doen:</h3>
+            <p>Nadenken over wat ik allemaal moet gaan coden voor bepaalde functies.</p>
+            <ul>
+                <li>Zorg dat de coin(rode en gele muntjes) ingevoerd kan worden en dat die input doorgegeven word tussen de 0 en 6(voor het speelbord)</li>
+                <li>Zorg dat elke coordinaat ingevoerd word met het juiste beurtgetal(1 voor geel en 2 voor rood)</li>
+                <li>Zorg dat de beurt steeds veranderd</li>
+                <li>Zorg dat de coins met de juiste kleur op hun plek vallen op het bord</li>
+                <li>Maak een script dat kan lezen of iemand 4 op een rij heeft</li>
+                <li>Zorg dat de visuals veranderen als er iemand gewonnen heeft</li>
+            </ul>
+            <h3>Hoe heb ik dit gedaan:</h3>
+            <p>gedaan:
+                ik begon met het passen en meten van de objecten en er voor te zorgen dat het er visueel goed uit zag en dat alles op de goede plek stond.<br>
+                daarna ben ik aan de slag gegaan met het inputsysteem, ik heb eerst een script gemaakt dat de X-positie van je muiscursor volgt.<br>
+                met die X-positie laat hij een muntje van de juiste kleur zweven die van kleur verandert als het iemand anders zijn beurt is.<br>
+                als je klikt om een muntje te plaatsen word er uitgerekent waar op de 7 plaatsen de X-positie van de muis het dichtste bij zit.<br> hierbij word de float x-positie verandert naar een int(geheel getal) tussen de 0 en 6.<br>
+                als het muntje geplaatst word worden de coordinaten van het muntje uitgerekent door middel van een 2d array. vb: int cord[0][0] voor linksonder en int cord[6][5] voor rechtsboven.<br>
+                de coordinaten veranderen van 0 naar 1 of 2 gebazeerd op welke beurt het is, 1 is geel en 2 is rood.<br>
+                dan word er elke beurt uitgerekent of er iemand gewonnen heeft, dit was best wel lastig.<br>
+                je hebt 4 manieren om 4 op een rij te krijgen, horizontaal, verticaal, van linkonder naar rechtsboven en linksboven naar rechtsonder, om dit uit te rekenen heb ik for loops gebruikt.<br>
+                for loops worden een bepaalt aantal keer uitgevoerd en dat kon ik goed gebruiken.<br> het systeem werkt zo:
+                bijvoorbeeld horizontaal, hij scant de onderste rij en als er op positie 0.0 een geel muntje staat is 0.0 dus 1, hij gaat zo de hele horizontale rij af en telt van 0 naar 3.<br> Maar als er een leeg vakje(0) of een rood muntje(2) tussen zit word de teller gereset.<br>
+                zo word de hele horizontale rij gescant, en daarna word de rij daar boven gescant.<br>
+                dat is hoe ik het heb laten werken.<br>
+                uiteindelijk heb ik nog een paar UI elementen toegevoegd zoals de reset knop, text van wie er gewonnen heeft en er voor gezorgd dat het spel stopt wanneer iemand gewonnen heeft.</p>
+        </div>
+
+        <div class="Downloadbuttons">
+            <h1><a href="https://drive.google.com/open?id=1Zuz0g33_SM39mgFxLFCSnOVVVJW2tXo3" target="blank">Download Project</a></h1>
+            <h1><a href="https://drive.google.com/open?id=1oSyO74HZEzyS5x3EhAQWekAr1Oyf3nUF" target="blank">Download Game</a></h1>
+        </div>
+    </body>
+</html>

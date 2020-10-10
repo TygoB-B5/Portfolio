@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spaceshooter</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="SpaceShooter.css"/>
+    </head>
+
+    <body>
+        <div class="title">
+            <h1>spaceshooter</h1>
+        </div>
+
+        <div class="downloadbutton">
+            <a href="https://drive.google.com/open?id=1FLYVuLu1m8hjOgd18bhYeFxigjEmRCw0" target="Blank"><img src="img/download1.png"></a>
+            <a href="https://drive.google.com/open?id=1kKW8p0V1ZgLkNppbjGSuCbJQKj3RTXO4" target="Blank"><img src="img/download2.png"></a>
+        </div>
+        
+            <div class="samenvatting">
+                <h1>SpaceShooter</h1>
+                <h2>Dit is mijn eerste game voor Gamedevelopment</h2>
+                <p>Dit spel is gemaakt in 4 weken tijd en is mijn eerste project voor gamedevelopment.<br>
+                Ik begon met het maken van de controller voor de spaceship en begon daarna met het maken van de AI enemies.<br>
+                Dit is een van de 1e grote games die ik gemaakt heb en ik ben er zeer trots op.<br>
+                Deze game is gemaakt in unity met gebruik van C#</p>
+            </div>
+
+            <h1 class="howitworks">Hoe werkt het: Player</h1>
+
+            <div class="scriptinfo">
+            <h2>Het inputsysteem</h2>
+            <p>
+            de floats en bools zijn allemaal nodig om de inputs in te bewaren. Deze waardes worden de inputs die je geeft, dus ButtonX word -1 als je de S knop indrukt en 1 als je D indrukt.<br>
+            Het is hetzelfde voor al de floats, het enige verschil is dat MouseX en MouseY Ge "Clamped" zijn zodat de waarde niet hoger kan worden dan een bepaalde float.<br>
+            De booleans gaan naar true als de toegewezen knop ingedrukt word.</p>
+            </div>
+
+            <div class="scriptinfo">
+                <h2>De Playercontroller</h2>
+                <p>
+                De playercontroller roept in elke physics update (void FixedUpdate) de functies MoveY, MoveX en Rotate, deze functies zorgen voor de beweingen van de player.<br>
+                De OnCollisionEnter checkt of je een object aanraakt met de tag "EnemyBullet", de enemybullet is de kogel van de enemy, als je de kogel aanraakt word er geluid gespeeld, je levens gaan er af en word de corouttine "Damage_" gerpoepen.<br>
+                "Lives" is ook een tag waar voor gecheckt word, dat zijn de groene hardjes die inspawnen. Als je deze aanraakt krijg je +1 leven.<br>
+                De Damage_ coroutine zorg voor een flikkerende animatie als je geraakt word, en maakt je invincable voor een tijdje.</p>
+                </div>
+
+                <div class="scriptinfo">
+                    <h2>De Cameracontroller</h2>
+                    <p>De Cameracontroller beweegt elke physicsupdate de positie van de camera, dit gebeurt via Vector3.Lerp.<br>
+                        Met vector3.Lerp kun je een waarde naar een andere waarde verandereren in een bepaalde tijd, ik heb dit gebruikt om de camera smooth achter de player te laten vliegen.<br>
+                        de "cursorLock" functie zet je cursor vast als het spel gestart word.</p>
+                    </div>
+
+                    <div class="scriptinfo">
+                        <h2>De Shooter</h2>
+                        <p>De Shooter zorgt er voor dat het juiste wapen geselcteerd word en dat de kogels afgeschoten worden.<br>
+                        de funcie Timers tellt de tijd dat er nodig is om opnieuw te schieten.<br>
+                        GiveHomingMissle geeft je een homing missle, SelectGuns zorgt er voor dat je je wapen kan selecteren en SelectGunsUI zorgt voor de UI die word weergegeven als je een bepaalt wapen geselecteerd hebt.<br>
+                        Bigpew & PewPew schieten de kogels af.<br>
+                        De coroutine Reload_ reload de Machinegun.</p>
+                        </div>
+
+                        <div class="scriptinfo">
+                            <h2>De Livescontroller (LivesUI)</h2>
+                            <p>De Livescontroller regelt alles wat levens betreft, het regelt de UI voor hoeveel levens je hebt en laat een animatie zien als er een leven af gaat in de functie Damage(die geroepen word vanaf het Playercontroller script).<br>
+                            De coroutine RedWhiteSwitch animeert de lives tekst een paar keer van rood naar wit als je geraakt bent.</p>
+                            </div>
+
+                            <div class="scriptinfo">
+                                <h2>De Misslemover</h2>
+                                <p>De misslemover beweegt de homing missle als die afgeschoten is, na 0.5 seconde word de meest dichtstbijzijnde enemy geroepen en gaat de missle er op af.<br>
+                                als de missle een enemy raakt verdwijnt de missle en gaat de enemy dood.<br>
+                                De functie FindClosestTarget vind de meest dichtstbijzijnde enemy.</p>
+                                </div>
+
+                                <div class="scriptinfo">
+                                    <h2>De Bulletmover</h2>
+                                    <p>De bulletmover beegt de bullet naar boven als deze afgeschoten is.</p>
+                                    </div>
+
+
+            <h1 class="howitworks">Hoe werkt het: Enemy</h1>
+
+            <div class="scriptinfo">
+                <h2>De Enemycontroller</h2>
+                <p>De enemycontroller zorgt voor beweging van de enemy, het bewegingsysteem het is zelfde als de Playercontroller.<br>
+                Het verschil is dat de enemycontroller bestuurd word door een AI, hiervoor gebruik ik een switch statement, er zijn 2 ints die een willekeurig getal krijgen tussen de 1 en 7.<br>
+                elk getal tussen de 1 en 7 geeft de enemy instructies om bijvoorbeeld te draaien, of om op de player te schieten en te richten.<br>
+                om er voor te zorgen dat de enemy niet te ver weg gaat beweegt de enemy naar je toe als de getallen 5, 6 of 7 gekozen worden en ook als de afstand tussen de player en den enemy te hoog is.<br>
+                verder word er in de enemycontroller nog gecheckt of de enemy geraakt word door de player bullet.</p>
+                </div>
+
+                <div class="scriptinfo">
+                    <h2>De Enemymarker</h2>
+                    <p>De enemymarker laat de rode marker rond de enemy de x en y rotatie van de player volgen zodat het altijd recht blijft en de marker verdwijnt als de afstand te hoog tussen de player en de maker, dit gebeurt met Vector3.Distance.</p>
+                    </div>
+
+                    <div class="scriptinfo">
+                        <h2>De Enemybullet</h2>
+                        <p>Het enemybullet script zit op de geschoten kogels van de enemy, dit script zorgt er voor dat de kogels vooruit gaan.</p>
+                        </div>
+
+            <h1 class="howitworks">Hoe werkt het: Lifecapsule</h1>
+
+            <div class="scriptinfo">
+                <h2>De Lifecapsulespawn</h2>
+                <p>Het lifecapsulespawn script instantiate Lifecapsules(groene hardjes) op een willekeurige plek met een bepaalde radius rond de player.</p>
+                </div>
+
+                <div class="scriptinfo">
+                    <h2>Life (controller)</h2>
+                    <p>Het script "Life" regent alles was het leven betreft als deze geïnstantiate is, zo zorgt het er voor dat het leven verwijderd word na 60 seconde, dat het leven rond draait en dat het leven verwijderd word als de player die aanraakt.</p>
+                    </div>
+
+            <h1 class="howitworks">Hoe werkt het: Menu</h1>
+
+            <div class="scriptinfo">
+                <h2>ButtonUI</h2>
+                <p>Het script "ButtonUI" zorgt er voor dat de juiste scénes ingeladen worden als je op de start, controls en exit knop klikt.</p>
+                </div>
+
+                <div class="scriptinfo">
+                    <h2>Controlsback</h2>
+                    <p>Het script "ControlsUI" doet het zelfde als ButtonUI maar dan alleen voor de "Back" knop in de "controls" scéne.</p>
+                    </div>
+
+                    <div class="scriptinfo">
+                        <h2>Cameraswipe</h2>
+                        <p>Het script "Cameraswipe" draait de camera in het menu om een mooie animatie te laten zien die door de skybox heen draait.</p>
+                        </div>
+
+
+                                    
+                            
+    </body>
+</html>
