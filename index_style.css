@@ -1,7 +1,7 @@
 
 html
 {
-  background-image: url("img/bg.png");
+  background-image: url("img/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -25,7 +25,7 @@ body
 
 .container
 {
-background-color: black;
+  background-color: black;
   border: 0.1vw solid rgba(0, 0, 0, 1); 
   display: inline-block;
   position:relative;
@@ -53,7 +53,7 @@ background-color: black;
     width: 100vw;
     height: 56vw;
     margin: 0;
-    margin-bottom: -0.5%;
+    margin-bottom: -1vw;
   }
 }
 
