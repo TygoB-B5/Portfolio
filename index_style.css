@@ -150,26 +150,32 @@ body
     top: 10%;
   }
   
-  .button {
+  .button_right, .button_left {
     position: absolute;
     width: 100%;
-    left:0;
     top: 45%;
     text-align: center;
     opacity: 0;
     transition: opacity .35s ease;
+    margin-left: 15%;
   }
+
+  .button_left{
+    margin-left: -15%;
+  }
+
   
-  .button a {
+  .button_right a, .button_left a {
     width: 200px;
     padding: 12px 48px;
     text-align: center;
     color: white;
     border: solid 2px white;
     z-index: 1;
-  }
+  } 
   
-  .container:hover .button {
+  
+  .container:hover .button_right, .container:hover .button_left {
     opacity: 1;
   }
 
@@ -180,7 +186,7 @@ body
       transition: top .5s ease;
     }
     
-    .button a {
+    .button_left a, .button_right a  {
       font-size: 30px;
     }
   }
