@@ -47,6 +47,7 @@ html
 
 body
 {
+    height: 100%;
     overflow: scroll;
     position: fixed;
     background-image: url("img/bg.jpg");
