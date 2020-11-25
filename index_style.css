@@ -47,9 +47,7 @@ html
 
 body
 {
-    height: 100%;
-    overflow: scroll;
-    position: fixed;
+    width: 100vw;
     background-image: url("img/bg.jpg");
     background-repeat: repeat;
     background-size: 3000px;
