@@ -47,7 +47,6 @@ html
 
 body
 {
-    width: 100vw;
     background-image: url("img/bg.jpg");
     background-repeat: repeat;
     background-size: 3000px;
@@ -158,18 +157,18 @@ body
   
   .button_right, .button_left, .button {
     position: absolute;
-    width: 100%;
+    width: 50%;
     top: 45%;
     text-align: center;
     opacity: 0;
     transition: opacity .35s ease;
-    margin-left: 15%;
+    margin-left: 40%;
     z-index: 0;
     pointer-events: none;
   }
 
   .button_left{
-    margin-left: -15%;
+    margin-left: 10%;
   }
 
   
