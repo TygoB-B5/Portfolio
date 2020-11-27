@@ -167,6 +167,11 @@ body
     pointer-events: none;
   }
 
+  
+  .button{
+    margin-left: 25%;
+  }
+
   .button_left{
     margin-left: 10%;
   }
@@ -180,12 +185,6 @@ body
     z-index: 1;
     pointer-events: all;
   } 
-
-
-  .button{
-    margin: 0;
-  }
-  
   
   .container:hover .button_right, .container:hover .button_left, .container:hover .button {
     opacity: 1;
