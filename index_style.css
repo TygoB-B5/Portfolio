@@ -115,7 +115,6 @@ body
     height: 100%;
     background: rgba(0, 0, 0, 0.1);
     transition: background 0.35s ease-out;
-    
   }
   
   .container:hover .overlay {
@@ -176,7 +175,6 @@ body
     pointer-events: none;
   }
 
-  
   .button{
     margin-left: 25%;
   }
@@ -185,7 +183,6 @@ body
     margin-left: 10%;
   }
 
-  
   .button_right a, .button_left a, .button a{
     padding: 12px 48px;
     text-align: center;
