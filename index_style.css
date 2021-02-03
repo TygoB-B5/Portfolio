@@ -147,10 +147,21 @@ body
     opacity: 1;
   }
 
-  .preview {
+  .preview, .onhoverpreview {
     position: absolute;
     width:  100%;
     height: 100%;
+  }
+
+  .onhoverpreview
+  {
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+
+  .container:hover .onhoverpreview
+  {
+    opacity: 1;
   }
 
   .title, .year {
