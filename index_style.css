@@ -190,6 +190,7 @@ body
     border: solid 2px white;
     z-index: 1;
     pointer-events: all;
+    text-decoration: none;
   } 
   
   .container:hover .button_right, .container:hover .button_left, .container:hover .button {
