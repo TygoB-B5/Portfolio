@@ -1,6 +1,14 @@
 html
 {
   background-color: black;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  overflow: hidden;
+  width: 0px;
+  background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 /*#region FadeAnimation*/
@@ -83,12 +91,12 @@ video::-webkit-media-controls {
   border: 0.1vw solid rgba(0, 0, 0, 1); 
   display: inline-block;
   position:relative;
-  width: 32.9vw;
+  width: 33vw;
   height: 18.5vw;
   margin: -3px;
 }
 
-@media (max-width: 1400px)
+@media (max-width: 1000px)
 {
   .container {
     width: 49.6vw;
@@ -96,7 +104,7 @@ video::-webkit-media-controls {
   }
 }
 
-@media (max-width: 1250px)
+@media (max-width: 1000px)
 {
     .intro, #title
   {
@@ -239,7 +247,7 @@ video::-webkit-media-controls {
     opacity: 1;
   }
 
-  @media (max-width: 1250px) 
+  @media (max-width: 600px) 
   {
     .title {
       font-size: 50px;
