@@ -1,13 +1,12 @@
 html
 {
   background-color: black;
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 ::-webkit-scrollbar {
-  overflow: hidden;
-  width: 0px;
+  width: 0px;  /* Remove scrollbar space */
   background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
@@ -85,38 +84,42 @@ video::-webkit-media-controls {
   display:none !important;
 }
 
+
+/*3 per row*/
 .container
+    {
+      background-color: black;
+      border: 0.1vw solid rgba(0, 0, 0, 1); 
+      display: inline-block;
+      position:relative;
+      width: 32.9vw;
+      height: 18.5vw;
+      margin: -3px;
+    }
+
+/*2 per row*/
+@media (max-aspect-ratio: 10/16)
 {
-  background-color: black;
-  border: 0.1vw solid rgba(0, 0, 0, 1); 
-  display: inline-block;
-  position:relative;
-  width: 33vw;
-  height: 18.5vw;
-  margin: -3px;
+.container {
+  width: 49vw;
+  height: 27.9vw;
+}
 }
 
-@media (max-width: 1000px)
+/*1 per row*/
+@media (max-aspect-ratio: 1/5)
 {
-  .container {
-    width: 49.6vw;
-    height: 27.9vw;
-  }
+  .intro, #title
+{
+    margin: 50px;
 }
 
-@media (max-width: 1000px)
-{
-    .intro, #title
-  {
-      margin: 50px;
-  }
-
-  .container {
-    width: 100vw;
-    height: 56vw;
-    margin: 0;
-    margin-bottom: -1vw;
-  }
+.container {
+  width: 100vw;
+  height: 56vw;
+  margin: 0;
+  margin-bottom: -1vw;
+}
 }
 
   .overlay {
@@ -185,11 +188,16 @@ video::-webkit-media-controls {
     top: 35%;
     transition: top .5s ease;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     text-transform: uppercase;
     color: white;
     z-index: 1;
+
+    -webkit-text-size-adjust:none;
+    -ms-text-size-adjust:none;
+    -moz-text-size-adjust:none;
+    text-size-adjust:none;
 
     -webkit-text-stroke-width: 0.3px;
     -webkit-text-stroke-color: rgba(0, 0, 0, 1)
@@ -245,16 +253,4 @@ video::-webkit-media-controls {
   
   .container:hover .button_right, .container:hover .button_left, .container:hover .button{
     opacity: 1;
-  }
-
-  @media (max-width: 600px) 
-  {
-    .title {
-      font-size: 50px;
-      transition: top .5s ease;
-    }
-    
-    .button_left a, .button_right a, .button a  {
-      font-size: 30px;
-    }
   }
