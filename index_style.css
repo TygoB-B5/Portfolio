@@ -73,6 +73,10 @@ body
     margin-bottom: 50px;
 }
 
+video::-webkit-media-controls {
+  display:none !important;
+}
+
 .container
 {
   background-color: black;
