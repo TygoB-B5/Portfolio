@@ -78,6 +78,8 @@ body
     height: max-content;
     font-size: 2vmin;
     margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 video::-webkit-media-controls {
@@ -115,14 +117,96 @@ video::-webkit-media-controls {
       margin: -3px;
     }
 
+    .year
+    {
+      opacity: 0;
+      top: 50%;
+      font-size: 30px;
+    }
+
+    .button_right, .button_left, .button {
+      position: absolute;
+      width: 50%;
+      top: 45%;
+      text-align: center;
+      opacity: 0;
+      transition: opacity .35s ease;
+      margin-left: 40%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+  .button_right a, .button_left a, .button a{
+    padding: 12px 48px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    z-index: 1;
+    pointer-events: all;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 1vw;
+  } 
+
 /*2 per row*/
-@media (max-aspect-ratio: 13/16)
+@media (max-aspect-ratio: 6/7)
 {
 .container {
   width: 49vw;
   height: 27.9vw;
 }
 
+.button_right a, .button_left a, .button a {
+  font-size: 1vw;
+  }
+
+.year, .title
+{
+  font-size: 2vw;
+}
+
+}
+
+/*1 per row*/
+@media (max-aspect-ratio: 6/9)
+{
+
+  .button_right a, .button_left a, .button a {
+    font-size: 3vw;
+    }
+
+  .intro, #title
+  {
+    font-size: 1.5vw;
+  }
+
+  .container {
+    width: 100vw;
+    height: 56.25vw;
+  }
+
+  .year, .title
+  {
+    font-size: 4.5vw;
+  }
+}
+
+/*2 per row*/
+@media (max-width: 800px)
+{
+.container {
+  width: 49vw;
+  height: 27.9vw;
+}
+
+.button_right a, .button_left a, .button a {
+  font-size: 1vw;
+  }
+
+.year, .title
+{
+  font-size: 2vw;
+}
 }
 
   .overlay {
@@ -188,29 +272,10 @@ video::-webkit-media-controls {
     top: 5%;
   }
 
-  .year
-  {
-    opacity: 0;
-    top: 50%;
-    font-size: 20px;
-  }
-
   .container:hover .year
   {
     top: 75%;
     opacity: 1;
-  }
-  
-  .button_right, .button_left, .button {
-    position: absolute;
-    width: 50%;
-    top: 45%;
-    text-align: center;
-    opacity: 0;
-    transition: opacity .35s ease;
-    margin-left: 40%;
-    z-index: 0;
-    pointer-events: none;
   }
 
   .button{
@@ -220,17 +285,6 @@ video::-webkit-media-controls {
   .button_left{
     margin-left: 10%;
   }
-
-  .button_right a, .button_left a, .button a{
-    padding: 12px 48px;
-    text-align: center;
-    color: white;
-    border: solid 2px white;
-    z-index: 1;
-    pointer-events: all;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.3);
-  } 
   
   .container:hover .button_right, .container:hover .button_left, .container:hover .button{
     opacity: 1;
