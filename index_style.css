@@ -121,7 +121,7 @@ video::-webkit-media-controls {
     {
       opacity: 0;
       top: 50%;
-      font-size: 30px;
+      font-size: 2vmin;
     }
 
     .button_right, .button_left, .button {
@@ -163,6 +163,11 @@ video::-webkit-media-controls {
 .year, .title
 {
   font-size: 2vw;
+}
+
+.year
+{
+  font-size: 1.6vw;
 }
 
 }
