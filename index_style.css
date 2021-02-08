@@ -4,10 +4,10 @@ html
 }
 
 ::-webkit-scrollbar {
-  overflow-y: hidden; /* Hide vertical scrollbar */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  width: 0px;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 0px;
+  background: transparent;
 }
 
 /*#region FadeAnimation*/
@@ -55,11 +55,11 @@ body
 {
     background-image: url("Thumb/bg.jpg");
     background-repeat: repeat;
-    background-size: 3000px;
-    -o-background-size: 3000px;
-    -moz-background-size: 3000px;
+    background-size: 2000px;
+    -o-background-size: 2000px;
+    -moz-background-size: 2000px;
 
-    animation: moveIt 100s linear infinite;
+    animation: moveIt 300s linear infinite;
     z-index: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
