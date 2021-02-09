@@ -134,7 +134,7 @@ video::-webkit-media-controls {
       font-size: 2vmin;
     }
 
-    .button_right, .button_left, .button {
+    .button_right, .button_left, .button, .button_down {
       position: absolute;
       width: 50%;
       top: 45%;
@@ -146,7 +146,7 @@ video::-webkit-media-controls {
       pointer-events: none;
     }
 
-  .button_right a, .button_left a, .button a{
+  .button_right a, .button_left a, .button a, .button_down a{
     padding: 12px 48px;
     text-align: center;
     color: white;
@@ -166,7 +166,7 @@ video::-webkit-media-controls {
   height: 27.9vw;
 }
 
-.button_right a, .button_left a, .button a {
+.button_right a, .button_left a, .button a, .button_down a {
   font-size: 1vw;
   }
 
@@ -186,7 +186,7 @@ video::-webkit-media-controls {
 @media (max-aspect-ratio: 6/9)
 {
 
-  .button_right a, .button_left a, .button a {
+  .button_right a, .button_left a, .button a , .button_down a {
     font-size: 3vw;
     }
 
@@ -216,7 +216,7 @@ video::-webkit-media-controls {
   height: 27.9vw;
 }
 
-.button_right a, .button_left a, .button a {
+.button_right a, .button_left a, .button a, .button_down a {
   font-size: 1vw;
   }
 
@@ -299,10 +299,15 @@ video::-webkit-media-controls {
     margin-left: 25%;
   }
 
+  .button_down{
+    margin-left: 25%;
+    margin-top: 10%;
+  }
+
   .button_left{
     margin-left: 10%;
   }
   
-  .container:hover .button_right, .container:hover .button_left, .container:hover .button{
+  .container:hover .button_right, .container:hover .button_left, .container:hover .button, .container:hover .button_down{
     opacity: 1;
   }
