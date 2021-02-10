@@ -54,7 +54,7 @@ html
 body
 {
     background-image: url("Thumb/darkbackground.jpg");
-    background-size: auto;
+    background-size: cover;
     background-attachment: fixed;
 
     /*
