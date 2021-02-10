@@ -11,7 +11,7 @@ html
 }
 
 /*#region FadeAnimation*/
-.tofade
+#tofade
 {
     -webkit-animation: fadein 8s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 8s; /* Firefox < 16 */
@@ -53,20 +53,26 @@ html
 
 body
 {
-    background-image: url("Thumb/bg.jpg");
-    background-repeat: repeat;
+    background-image: url("Thumb/darkbackground.jpg");
+    background-size: auto;
+    background-attachment: fixed;
+
+    /*
     background-size: 2000px;
     -o-background-size: 2000px;
     -moz-background-size: 2000px;
+    background-repeat: repeat;
 
     animation: moveIt 300s linear infinite;
+    */
     z-index: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-.wrapper
+#wrapper
 {
   padding-top: 25vh;
   padding-bottom: 50vh;
@@ -78,7 +84,7 @@ body
 }
 
 
-.intro, #title, #projects
+#intro, #title, #projects, #footer
 {
     color: rgb(225, 225, 255);
     height: max-content;
@@ -119,7 +125,7 @@ video::-webkit-media-controls {
 .container
     {
       background-color: black;
-      border: 0.1vw solid rgba(0, 0, 0, 1); 
+      border: 0.1vw solid rgb(53, 27, 42); 
       display: inline-block;
       position:relative;
       width: 32.9vw;
@@ -296,4 +302,22 @@ video::-webkit-media-controls {
   
   .container:hover .button{
     opacity: 1;
+  }
+
+  #footer
+  {
+    margin-top: 50px;
+    margin-bottom: 75px;
+  }
+
+  .footeritem
+  {
+    margin-left: 5%;
+    display: inline-block;
+    width: 40%;
+  }
+
+  ul li
+  {
+    list-style: square;
   }
