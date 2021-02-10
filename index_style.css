@@ -1,5 +1,6 @@
 html
 {
+  background-color: black;
   background-image: url("Thumb/darkbackground.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -94,7 +95,18 @@ body
 
 #projects
 {
+  margin-bottom: 20px;
   text-align: center;
+}
+
+.line
+{
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 30px;
+
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.363);
 }
 
 video::-webkit-media-controls {
@@ -183,6 +195,12 @@ video::-webkit-media-controls {
   font-size: 1.6vw;
 }
 
+#footer
+{
+  margin-left: 20%;
+  margin-right: 10%;
+}
+
 }
 
 /*1 per row*/
@@ -203,11 +221,17 @@ video::-webkit-media-controls {
     font-size: 4.5vw;
   }
 
-  .intro, #title, #projects
+  #footer
   {
-      font-size: 1.5vw;
-      margin-left: 10vw;
-      margin-right: 10vw;
+    margin-left: 20%;
+    margin-right: 10%;
+  }
+
+  #intro, #title, #projects
+  {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 1.5vw;
   }
 }
 
