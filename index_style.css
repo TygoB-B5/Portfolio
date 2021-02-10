@@ -153,7 +153,7 @@ video::-webkit-media-controls {
     .button{
       position: absolute;
       width: 50%;
-      top: 45%;
+      top: 30%;
       text-align: center;
       opacity: 0;
       transition: opacity .35s ease;
