@@ -1,6 +1,8 @@
 html
 {
-  background-color: black;
+  background-image: url("Thumb/darkbackground.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 ::-webkit-scrollbar {
@@ -53,18 +55,14 @@ html
 
 body
 {
-    background-image: url("Thumb/darkbackground.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-
-    /*
-    background-size: 2000px;
-    -o-background-size: 2000px;
-    -moz-background-size: 2000px;
+    background: url("Thumb/invader.png");  
+    background-size: 200px;
+    -o-background-size: 200px;
+    -moz-background-size: 200px;
     background-repeat: repeat;
 
-    animation: moveIt 300s linear infinite;
-    */
+    animation: moveIt 5s linear infinite;
+    
     z-index: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -79,8 +77,8 @@ body
 }
 
 @keyframes moveIt {
-  from {background-position: bottom left;}
-  to {background-position: top right;}
+  from {background-position: 0px 200px;}
+  to {background-position: 200px 0px;}
 }
 
 
@@ -125,7 +123,7 @@ video::-webkit-media-controls {
 .container
     {
       background-color: black;
-      border: 0.1vw solid rgb(53, 27, 42); 
+      border: 0.1vw solid rgb(0, 0, 0); 
       display: inline-block;
       position:relative;
       width: 32.9vw;
