@@ -65,14 +65,14 @@ body
 #wrapper
 {
   padding-top: 10vh;
-  padding-left: 30vw;
+  padding-left: 20vw;
 }
 
 #intro, #projects, #footer
 {
     color: rgb(225, 225, 255);
     height: max-content;
-    font-size: 2vmin;
+    font-size: 3vmin;
     margin-bottom: 50px;
 }
 
