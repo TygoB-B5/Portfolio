@@ -54,10 +54,10 @@ body
 {
   z-index: 0;
   position: fixed;
-  margin-left: 90%;
+  margin-left: 99vw;
   content: "";
   background-color: white;
-  width: 10vw;
+  width: 1vw;
   height: 5000px;
   margin-top: -2000px;
 }
