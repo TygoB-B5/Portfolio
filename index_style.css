@@ -80,7 +80,7 @@ body
   padding-left: 20vw;
 }
 
-#intro, #projects, #footer
+#intro, .containerText, #footer
 {
     color: rgb(225, 225, 255);
     height: max-content;
@@ -88,7 +88,7 @@ body
     margin-bottom: 50px;
 }
 
-#projects
+.containerText
 {
   margin-bottom: 20px;
   text-align: center;
