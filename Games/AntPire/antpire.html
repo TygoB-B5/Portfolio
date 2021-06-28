@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=1280 height=720></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -23,20 +23,19 @@
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">AntPire</div>
-        <p style="font-family: arial; padding-top: 10px;">NOTE: Audio does not work because of incompatable WebGL audio system.</p>
       </div>
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/aa.loader.js";
+      var loaderUrl = buildUrl + "/AntPire.loader.js";
       var config = {
-        dataUrl: buildUrl + "/aa.data",
-        frameworkUrl: buildUrl + "/aa.framework.js",
-        codeUrl: buildUrl + "/aa.wasm",
+        dataUrl: buildUrl + "/AntPire.data.br",
+        frameworkUrl: buildUrl + "/AntPire.framework.js.br",
+        codeUrl: buildUrl + "/AntPire.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "AntPire",
         productName: "AntPire",
-        productVersion: "1.0",
+        productVersion: "1.0.2",
       };
 
       var container = document.querySelector("#unity-container");
@@ -63,8 +62,8 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "1280px";
+        canvas.style.height = "720px";
       }
       loadingBar.style.display = "block";
 
